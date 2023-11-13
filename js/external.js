@@ -25,10 +25,9 @@ let amazonHourlyRate = parseInt(prompt('What is your hourly rate for Amazon?'));
 let amazonHours = parseInt(prompt('How many hours did you work at Amazon?'));
 let totalAmazonIncome = amazonHourlyRate * amazonHours;
 
-
 let facebookHourlyRate = parseInt(prompt('What is your hourly rate for Facebook?'));
 let facebookHours = parseInt(prompt('How many hours did you work at Facebook?'));
 let totalFacebookIncome = facebookHourlyRate * facebookHours;
 
-let totalIncome = totalGoogleIncome +totalAmazonIncome + totalFacebookIncome;
+let totalIncome = totalGoogleIncome + totalAmazonIncome + totalFacebookIncome;
 alert(`You made $${totalIncome}!`)
