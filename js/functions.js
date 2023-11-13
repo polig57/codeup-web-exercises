@@ -19,7 +19,7 @@ function sayHello(name) {
  *
  * console.log 'helloMessage' to check your work
  */
-let helloMessage = sayHello('Poli');
+const helloMessage = sayHello(name ='Poli');
 console.log(helloMessage);
 
 /**
@@ -29,7 +29,7 @@ console.log(helloMessage);
  * console.
  */
 
-let myName= 'Poli';
+let myName= 'jeff';
 sayHello(myName);
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -77,11 +77,11 @@ console.log(calculateTip(20, 10));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-// let userBillTotal = Number(prompt('What is your bill total?'))
-// let userTipPercentage = Number(prompt('What percentage would you like to leave as a tip?'))
-// let grandTotal = calculateTip(userBillTotal, userTipPercentage);
-//
-// alert(`Great, your grand total is $${grandTotal}!`);
+let userBillTotal = Number(prompt('What is your bill total?'))
+let userTipPercentage = Number(prompt('What percentage would you like to leave as a tip?'))
+let grandTotal = calculateTip(userBillTotal, userTipPercentage);
+
+alert(`Great, your grand total is $${grandTotal}!`);
 
 /**
  * TODO:
