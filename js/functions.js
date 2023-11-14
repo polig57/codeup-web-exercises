@@ -79,9 +79,9 @@ console.log(calculateTip(20, 10));
  */
 let userBillTotal = Number(prompt('What is your bill total?'))
 let userTipPercentage = Number(prompt('What percentage would you like to leave as a tip?'))
-let grandTotal = calculateTip(userBillTotal, userTipPercentage);
+let tipTotal = calculateTip(userBillTotal, userTipPercentage);
 
-alert(`Great, your grand total is $${grandTotal}!`);
+alert(`Great, your tip total is $${tipTotal}!`);
 
 /**
  * TODO:
