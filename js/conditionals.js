@@ -22,6 +22,21 @@
  * console.logging the function's return value
  */
 
+// function analyzeColor(color){
+//     color = color.toLowerCase();
+//
+//     if(color === 'blue') {
+//         return `${color} is my favorite color too!`;
+//     } else if(color === 'red') {
+//         return 'Red is the color of Buc-ees Hat!';
+//     } else {
+//         return `I do not have ${color} loaded into my Database :(`;
+//     }
+// }
+// console.log(analyzeColor('BLUE'));
+// console.log(analyzeColor('RED'));
+// console.log(analyzeColor('INDIGO'));
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -34,11 +49,27 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+// console.log(analyzeColor(randomColor))
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+
+// const analyzeColor = (color) => {
+//     switch (color){
+//         case 'blue':
+//             return 'Blue is my favorite color too!';
+//         case 'red':
+//             return 'Red is the color of Buc-ees Hat!';
+//         default:
+//             return `I do NOT have ${color} in my Database`;
+//     }
+// }
+//
+// console.log(analyzeColor('red'));
+// console.log(analyzeColor('blue'));
+// console.log(analyzeColor('purple'));
+
 
 /**
  * TODO:
@@ -46,6 +77,9 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+//
+// let userFavColor = prompt('Give me a color').toLowerCase();
+// alert(analyzeColor(userFavColor));
 
 /* ########################################################################## */
 
@@ -69,6 +103,23 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+// const calculateTotal = (userLuckyNum, userTotalAmount) => {
+//   switch (userLuckyNum) {
+//       case 0:
+//           return userTotalAmount;
+//       case 1:
+//           return userTotalAmount - (userTotalAmount * .10);
+//       case 2:
+//           return userTotalAmount - (userTotalAmount * .25);
+//       case 3:
+//           return userTotalAmount - (userTotalAmount * .35);
+//       case 4:
+//           return userTotalAmount - (userTotalAmount * .50);
+//       case 5:
+//           return 0
+//   }
+// }
+// console.log(calculateTotal(0, 100))
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -79,6 +130,13 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 // Generate a random number between 0 and 6
 // const luckyNumber = Math.floor(Math.random() * 6);
+// let userBillTotal = prompt('What is the total of your bill?')
+//
+// alert(`Your lucky number was ${luckyNumber}`);
+// alert(`your price BEFORE discount was $${userBillTotal}`);
+//
+// let userDiscountedPrice = calculateTotal(luckyNumber, userBillTotal);
+// alert(`Your total price AFTER discount it $${userDiscountedPrice}`)
 
 /**
  * TODO:
@@ -98,3 +156,26 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+let userInput = confirm('Do you want to enter a number?');
+
+if(userInput) {
+    const userNum = prompt(`Enter a NUMBER`);
+
+    function evenOrOdd() {
+        if (userNum % 2 === 1) {
+            alert(`Your number is Odd`);
+        } else {
+            alert(`Your number is Even`)
+        }
+    }
+
+    function userNumPlus100() {
+        return userNum + 100;
+    }
+
+    function userNumNegOrPos() {
+        if (userNum < 0) {
+            alert(`your number is Positive`)
+        }
+    }
+}
