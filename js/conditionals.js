@@ -156,26 +156,39 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-let userInput = confirm('Do you want to enter a number?');
 
-if(userInput) {
-    const userNum = prompt(`Enter a NUMBER`);
+let userResponse = confirm('Do you want to enter a Number?');
+let userNum;
 
-    function evenOrOdd() {
-        if (userNum % 2 === 1) {
-            alert(`Your number is Odd`);
-        } else {
-            alert(`Your number is Even`)
-        }
+if(userResponse) {
+    userNum = Number(prompt('Enter a Number:'));
+    alert(checkUserNum(userNum));
+} else {
+    alert('Okay, bye.')
+}
+function checkUserNum() {
+    if(isNaN(userNum)) {
+        return 'You have submitted the wrong INPUT DATA TYPE. Please enter a Number (ex. 17)';
+    } else {
+        alert(checkEvenOrOdd(userNum));
+        alert(userNumPlus100(userNum));
+        alert(checkUserPosOrNegNum(userNum));
     }
-
-    function userNumPlus100() {
-        return userNum + 100;
+}
+function checkEvenOrOdd() {
+    if(userNum % 2 === 0) {
+        return 'The number is Even'
+    } else {
+        return 'The number is Odd'
     }
-
-    function userNumNegOrPos() {
-        if (userNum < 0) {
-            alert(`your number is Positive`)
-        }
+}
+function userNumPlus100() {
+    return userNum + 100;
+}
+function checkUserPosOrNegNum() {
+    if (userNum < 0) {
+        return 'The number is Negative'
+    } else {
+        return 'The number is Positive'
     }
 }
