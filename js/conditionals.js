@@ -162,33 +162,33 @@ let userNum;
 
 if(userResponse) {
     userNum = Number(prompt('Enter a Number:'));
-    alert(checkUserNum(userNum));
+    checkUserNum(userNum);
 } else {
     alert('Okay, bye.')
 }
-function checkUserNum() {
+function checkUserNum(userNum) {
     if(isNaN(userNum)) {
         return 'You have submitted the wrong INPUT DATA TYPE. Please enter a Number (ex. 17)';
     } else {
-        alert(checkEvenOrOdd(userNum));
-        alert(userNumPlus100(userNum));
-        alert(checkUserPosOrNegNum(userNum));
+       return checkEvenOrOdd(userNum);
     }
 }
-function checkEvenOrOdd() {
+function checkEvenOrOdd(userNum) {
     if(userNum % 2 === 0) {
-        return 'The number is Even'
+        alert('The number is Even');
     } else {
-        return 'The number is Odd'
+        alert('The number is Odd');
     }
+       return userNumPlus100(userNum);
 }
-function userNumPlus100() {
-    return userNum + 100;
+function userNumPlus100(userNum) {
+    alert(userNum + 100);
+    return checkUserPosOrNegNum(userNum);
 }
-function checkUserPosOrNegNum() {
+function checkUserPosOrNegNum(userNum) {
     if (userNum < 0) {
-        return 'The number is Negative'
+        alert('The number is Negative');
     } else {
-        return 'The number is Positive'
+        alert('The number is Positive');
     }
 }
