@@ -9,12 +9,13 @@ do {
 userInput = Number(userInput);
 if(userInput) {
     console.log(`Number to skip is: ${userInput}`)
-    for (let i = 0; i <= 50; i++) {
-        if(i !== userInput && i % 2 === 1) {
-            console.log(`Here is an odd number: ${i}`);
-        }
-        if(i === userInput) {
-            console.log(`Yikes! Skipping number: ${userInput}`)
-        }
+    for (let i = 1; i < 50; i++) {
+        if(i % 2 === 0) {
+            continue;
+        } if(i === userInput) {
+            console.log(`Yikes! Skipping number: ${userInput}`);
+          } else {
+                console.log(`Here is an odd number: ${i}`);
+            }
     }
 }
