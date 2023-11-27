@@ -376,7 +376,7 @@ switch(userSelection) {
         let returnAlert = [];
         cheeses.forEach(cheese => {
             if(cheese.country_of_origin.includes(userOriginSearch)) {
-               returnAlert.push(cheese.name, ' ',cheese.country_of_origin, ' ', cheese.type, '\n');
+               returnAlert.push(cheese.name, ' ', cheese.country_of_origin, ' ', cheese.type, '\n');
             }
         })
         alert(returnAlert.join(''));
