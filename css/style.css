@@ -1,3 +1,38 @@
 h1 {
-    color: red;
+    text-align: center;
+}
+h1, h2, h3 {
+    background-color: aquamarine;
+    text-decoration: underline;
+}
+body {
+    background-color: lime;
+    background-image: url("./../img/codeup-duck.png");
+    color: orangered;
+    font-family: 'Vina Sans', sans-serif;
+}
+li {
+    list-style-type: armenian;
+}
+table {
+    table-layout: fixed;
+    width: 1200px;
+    border: 3px solid red;
+    background-color: lime;
+}
+td {
+    border: 15px solid blue;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+tr {
+    padding: 35px;
+    font-size: xx-large;
+    text-align: center;
+}
+a {
+    background: darkviolet;
+    font-size: xx-large;
+    cursor: crosshair;
 }
