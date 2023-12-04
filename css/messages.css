@@ -8,17 +8,19 @@ body, html {
 :root {
     --bg-info: #cdddff;
     --text-info: #5b58ad;
+
     --bg-success: #cff3da;
     --text-success: #68a981;
+
     --bg-warning: #fcfbc9;
     --text-warning: #ab9e4a;
+
     --bg-error: #fad2d6;
     --text-error: #94344a;
 }
 .message {
     padding: .5em;
-    margin: 5px;
-    width: calc(100% - 4px);
+    margin: .5em;
     border: solid 1px lightgray;
     border-radius: 5px;
 }
