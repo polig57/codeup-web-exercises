@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+nav {
+    background: grey;
+    height: 3em;
+}
+ul {
+    margin: 0 auto;
+    padding: 14px;
+    /*This removes the bullets*/
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /*This give us the space in between each list item*/
+    gap: 15px;
+}
+li {
+    /*width: 100%;*/
+    /*margin: 1em;*/
+}
+ul li:nth-of-type(4) {
+    margin-right: auto;
+}
+a {
+    color: black;
+    /*This removes the underline*/
+    text-decoration: none;
+}
+a:hover {
+    /*Changes the color of the anchor to blue when its hovered*/
+    color: blue;
+}
