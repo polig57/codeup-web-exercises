@@ -1,0 +1,21 @@
+.row-heading {
+    background-color: blue;
+    text-align: center;
+}
+.row-heading-2 {
+    background-color: lightblue;
+    text-align: center;
+}
+.row-info {
+    background-color: aqua;
+    text-align: center;
+}
+.row-skills {
+    text-align: center;
+}
+h3 {
+    color: darkblue;
+}
+hr {
+    border-top: 5px solid green;
+}
