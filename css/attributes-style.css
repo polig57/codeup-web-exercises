@@ -22,7 +22,12 @@
     font-size: 16px;
     margin-top: 10px;
 }
-
+.background-color {
+    background-color: #5b58ad;
+}
+.font-adjustment {
+    font-size: 20px;
+}
 #toggle-btn {
     display: block;
     margin: 20px auto;
