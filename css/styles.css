@@ -47,12 +47,12 @@ body {
     box-shadow: 0 0 10px 1px rgba(0,0,0,0.25);
 }
 .container.login {
+    position: relative;
     background-color: #FFFFFF;
     border-radius: 20px;
     padding: 45px 25px;
     width: calc(100% - 40px);
     max-width: 530px;
-    position: relative;
     box-shadow: 0 0 10px 1px rgba(0,0,0,0.25);
 }
 
