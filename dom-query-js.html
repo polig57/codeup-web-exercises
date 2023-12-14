@@ -24,39 +24,50 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+
+<button id="main-header-btn">Toggle Main Header Change</button>
+<button id="sub-header-btn">Toggle Sub Header Change</button>
+<button id="item-grey-btn">Toggle Item Grey Change</button>
+<button id="sub-para-btn">Toggle Sub Paragraph Change</button>
 <script>
     "use strict";
-    // TODO: Uncomment next line and get the main header element by id
+function mainHeaderChange(e) {
     const mainHeader = document.querySelector('#main-header');
-
-    // TODO: Set inner html of mainHeader to "JavaScript is Cool"
     mainHeader.innerHTML = 'JavaScript is Cool';
+}
+let button1 = document.getElementById('main-header-btn');
+button1.addEventListener('click', mainHeaderChange);
 
-    // TODO: Uncomment the next line and get the sub header element by id
+function subHeaderChange(e) {
     const subHeader = document.querySelector('#sub-header');
-
-    // TODO: Set the text color of subHeader to blue
     subHeader.style.color = 'blue';
-    // TODO: Uncomment the next line and get all list items
-    const listItems = document.querySelectorAll('li');
+}
+let button2 = document.getElementById('sub-header-btn');
+button2.addEventListener('click', subHeaderChange);
 
-    // TODO: Set text color on every other list item to grey
+function itemTextColorChange(e) {
+    const listItems = document.querySelectorAll('li');
     for (let i = 0; i < listItems.length; i++) {
-        if(i % 2 === 0) {
+        if (i % 2 === 0) {
             listItems[i].style.color = 'grey';
         }
     }
+}
+let button3 = document.getElementById('item-grey-btn');
+button3.addEventListener('click', itemTextColorChange);
 
-    // TODO: Set text color of li with dbid = 1 to blue
-    let textColor = document.querySelector('li[data-dbid="1"]')
-    textColor.style.color = 'blue';
 
-
-    // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+function subParagraphChange(e) {
     const subParagraphs = document.querySelector('.sub-paragraph');
+    subParagraphs.innerText = 'Mission Accomplished!';
+}
+let button4 = document.getElementById('sub-para-btn');
+button4.addEventListener('click', subParagraphChange);
 
-    // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-    subParagraphs.innerText = 'Mission Accomplished!'
+
+// TODO: Set text color of li with dbid = 1 to blue
+let textColor = document.querySelector('li[data-dbid="1"]')
+textColor.style.color = 'blue';
 </script>
 </body>
 </html>
