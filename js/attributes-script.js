@@ -6,13 +6,17 @@ let interval = 2000;
 // }
 
 // Two seconds after the page loads, change the "profile-pic" src attribute to a different image
-let interval2Sec = setTimeout( () => {
+let interval2Sec =  (e) => {
     let profileModifier = document.querySelector('#profile-pic');
     // profileModifier.src = 'img/codeup-duck.png';
     // Alternate way to so the above code using 'setAttribute'
     profileModifier.setAttribute('src', 'img/codeup-duck.png');
 
-}, interval);
+};
+
+let button1 = document.getElementById('profile-pic-btn');
+button1.addEventListener('click', interval2Sec)
+
 
 //Four seconds after the page loads, use innerHTML to change the name in "profile-name"
 let interval4sec = setTimeout( () => {
@@ -35,3 +39,8 @@ let intervalEvery2Sec = setInterval( () => {
     let profileModifier = document.querySelector('#profile-card');
     profileModifier.classList.toggle('background-color');
 }, 2000);
+
+
+// Add 4 buttons to the page. Attach click event listeners to each of the buttons and have the handlers perform the
+// modifications that were automatically taking place.
+// For example, the first button should set inner html of mainHeader to "JavaScript is Cool".

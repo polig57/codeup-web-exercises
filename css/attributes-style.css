@@ -28,7 +28,7 @@
 .font-adjustment {
     font-size: 20px;
 }
-#toggle-btn {
+#profile-card-btn {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
@@ -39,6 +39,6 @@
     cursor: pointer;
 }
 
-#toggle-btn:hover {
+#profile-card-btn:hover {
     background-color: #0056b3;
 }
