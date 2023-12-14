@@ -1,10 +1,17 @@
-// Setting my interval time to use for all anon func
+// Setting my interval time to use for all anon funcs
 let interval = 2000;
+
+// let timerFunc = function() {
+//
+// }
 
 // Two seconds after the page loads, change the "profile-pic" src attribute to a different image
 let interval2Sec = setTimeout( () => {
     let profileModifier = document.querySelector('#profile-pic');
-    profileModifier.src = 'img/codeup-duck.png';
+    // profileModifier.src = 'img/codeup-duck.png';
+    // Alternate way to so the above code using 'setAttribute'
+    profileModifier.setAttribute('src', 'img/codeup-duck.png');
+
 }, interval);
 
 //Four seconds after the page loads, use innerHTML to change the name in "profile-name"
