@@ -29,45 +29,63 @@
 <button id="sub-header-btn">Toggle Sub Header Change</button>
 <button id="item-grey-btn">Toggle Item Grey Change</button>
 <button id="sub-para-btn">Toggle Sub Paragraph Change</button>
+
+<!-----------------------------------------------SCRIPT-------------------------------------------------------------->
 <script>
-    "use strict";
-function mainHeaderChange(e) {
-    const mainHeader = document.querySelector('#main-header');
-    mainHeader.innerHTML = 'JavaScript is Cool';
-}
-let button1 = document.getElementById('main-header-btn');
-button1.addEventListener('click', mainHeaderChange);
+"use strict";
 
-function subHeaderChange(e) {
-    const subHeader = document.querySelector('#sub-header');
-    subHeader.style.color = 'blue';
-}
-let button2 = document.getElementById('sub-header-btn');
-button2.addEventListener('click', subHeaderChange);
+// const mainHeader = document.querySelector('#main-header');
+// let button1 = document.getElementById('main-header-btn');
+// button1.addEventListener('click', mainHeaderChange);
+//
+// const subHeader = document.querySelector('#sub-header');
+// let button2 = document.getElementById('sub-header-btn');
+// button2.addEventListener('click', subHeaderChange);
+//
+// const listItems = document.querySelectorAll('li');
+// let button3 = document.getElementById('item-grey-btn');
+// button3.addEventListener('click', itemTextColorChange);
+//
+// const subParagraphs = document.querySelector('.sub-paragraph');
+// let button4 = document.getElementById('sub-para-btn');
+// button4.addEventListener('click', subParagraphChange);
+// function mainHeaderChange(e) {
+//     mainHeader.innerHTML = 'JavaScript is Cool';
+// }
+// function subHeaderChange(e) {
+//     subHeader.style.color = 'blue';
+// }
+// function itemTextColorChange(e) {
+//     for (let i = 0; i < listItems.length; i++) {
+//         if (i % 2 === 0) {
+//             listItems[i].style.color = 'grey';
+//         }
+//     }
+// }
+// function subParagraphChange(e) {
+//     subParagraphs.innerText = 'Mission Accomplished!';
+// }
 
-function itemTextColorChange(e) {
-    const listItems = document.querySelectorAll('li');
-    for (let i = 0; i < listItems.length; i++) {
-        if (i % 2 === 0) {
-            listItems[i].style.color = 'grey';
-        }
-    }
-}
-let button3 = document.getElementById('item-grey-btn');
-button3.addEventListener('click', itemTextColorChange);
+// let textColor = document.querySelector('li[data-dbid="1"]')
+// textColor.style.color = 'blue';
 
+// Add code that will change the background color of an h1 element when clicked.
+let h1Selector = document.querySelector('h1');
+h1Selector.addEventListener('click', () => h1Selector.style.backgroundColor = 'red');
 
-function subParagraphChange(e) {
-    const subParagraphs = document.querySelector('.sub-paragraph');
-    subParagraphs.innerText = 'Mission Accomplished!';
-}
-let button4 = document.getElementById('sub-para-btn');
-button4.addEventListener('click', subParagraphChange);
+// Make all paragraphs have a font size of 18px when they are double clicked.
+let paragraphSelector = document.querySelector('p');
+let paraLarge = () => { paragraphSelector.style.fontSize = '18px' };
+paragraphSelector.addEventListener('dblclick', paraLarge);
 
+// Set all li text color to red when the mouse is hovering; reset to black when it is not.
+let liSelector = document.querySelectorAll('ul');
+const liColorChangeRed = () => { liSelector.style.color = 'red' };
+const liColorChangeBlack = () => { liSelector.style.color = 'black' };
 
-// TODO: Set text color of li with dbid = 1 to blue
-let textColor = document.querySelector('li[data-dbid="1"]')
-textColor.style.color = 'blue';
+liSelector.addEventListener('mouseenter', liColorChangeRed);
+liSelector.addEventListener('mouseleave', liColorChangeBlack);
+
 </script>
 </body>
 </html>
