@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script>
+"use strict";
+
+const sequence =
+    ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+    'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter' ]
+let i = 0;
+window.addEventListener('keyup', checkKey);
+function checkKey(e) {
+    if (e.key === sequence[i]){
+        i++;
+    }  else {
+        i = 0;
+        alert('You entered in the wrong sequence, try again');
+    }
+    if (i === 11) {
+        alert('YOU HAVE 30 LIVES!');
+    }
+}
+</script>
+</body>
+</html>
